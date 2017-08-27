@@ -193,3 +193,6 @@
 /.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/segments.gen
 /.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/segments_4
 /.recommenders/index/http___download_eclipse_org_recommenders_models_neon_/write.lock
+*.class
+/Recitation1/.classpath
+/Recitation1/.project
