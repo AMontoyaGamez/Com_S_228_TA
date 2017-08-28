@@ -7,8 +7,7 @@ public class _0_CommandLineArg_example {
 		System.out.println(args[0]);
 		
 		for(int i = 1; i < args.length; i++){
-			System.out.print(args[i]);
+			System.out.println(args[i]);
 		}
-		
 	}
 }
