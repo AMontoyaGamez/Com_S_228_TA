@@ -23,7 +23,7 @@ public class _1_Debug_Example {
 		System.out.println("Welcome to Com S 228!");
 		
 		//ex2 - Toolbar Buttons
-//		ex2();
+		ex2();
 		
 		//ex3 - Setting BreakPoints(Regular and Conditional)
 //		ex3();
@@ -64,7 +64,7 @@ public class _1_Debug_Example {
 	
 	public static void ex3(){
 		int[] arr = new int[20];
-		for(int i = 0; i <= arr.length; i++){
+		for(int i = 0; i < arr.length; i++){
 			arr[i] = i;
 			System.out.println(arr[i]);
 		}

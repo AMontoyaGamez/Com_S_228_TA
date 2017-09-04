@@ -110,7 +110,7 @@ public class _2_JUnit_Example {
 		System.out.println("-This is AfterClass");
 	}
 	
-	public static boolean isAlpha(String word){
+	private boolean isAlpha(String word){
 		word = word.toLowerCase();
 		for(int i = 0; i < word.length(); i++){
 			if(word.charAt(i) > 'z' || word.charAt(i) < 'a')
@@ -120,10 +120,7 @@ public class _2_JUnit_Example {
 		return true;
 	}
 	
-	public static boolean isEven(String word){
+	private boolean isEven(String word){
 		return word.length() % 2 == 0;
 	}
-	
-	
-
 }

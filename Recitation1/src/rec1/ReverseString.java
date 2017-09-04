@@ -16,7 +16,7 @@ public class ReverseString {
 	 */
 	public static void main(String[] args) {
 		// Word to reverse
-		char[] word = args[0].toCharArray(); //"racecar".toCharArray();
+		char[] word = "racecar".toCharArray();
 		
 		// Reverse word
 		reverseString(word);
