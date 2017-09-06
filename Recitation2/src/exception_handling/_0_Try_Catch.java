@@ -1,4 +1,4 @@
-package Try_Catch;
+package exception_handling;
 
 import java.io.FileNotFoundException;
 
