@@ -97,19 +97,31 @@ public class IntegerMatrix {
 	@Override
 	public boolean equals(Object obj)
 	{
-		//TODO
-		//check type
+		//1 - Ensure object given is not null
 		
-		//cast
+		//2 - check type
 		
-		//check equals
+		//3 - cast
+		
+		//4 - check equals
 	}
 	
 	@Override
 	public IntegerMatrix clone()
 	{
-		//TODO
-		//deep copy
+//	 	1-Implement cloneable interface
+		
+		
+//		2-Override clone() method
+		
+		
+//		3-Run super.clone() in try-catch block(Allocates memory)
+		
+		
+//		4-Copy elements into new clone(Deep Copy)
+		
+				
+//		5-Return clone
 	}
 	
 	@Override
