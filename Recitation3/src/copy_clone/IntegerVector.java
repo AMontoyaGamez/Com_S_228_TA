@@ -1,4 +1,4 @@
-package recitation2;
+package copy_clone;
 
 /**
  * 
@@ -21,7 +21,8 @@ public class IntegerVector implements Cloneable {
 	 * 
 	 * @param dimension
 	 * @throws IllegalArgumentException
-	 *             if the dimension is less than or equal to zero
+	 *             if the dimension is less than or equal to 
+	 *             zero
 	 */
 	public IntegerVector(int dimension) {
 		if (dimension <= 0)
@@ -38,6 +39,7 @@ public class IntegerVector implements Cloneable {
 	 */
 	public IntegerVector(IntegerVector existing) {
 		//deep copy
+		//TODO
 	}
 
 	/**
@@ -104,6 +106,7 @@ public class IntegerVector implements Cloneable {
 	@Override
 	public boolean equals(Object obj) {
 		//equals
+		//TODO
 	}
 
 	/**
@@ -114,11 +117,11 @@ public class IntegerVector implements Cloneable {
 	@Override
 	public IntegerVector clone() {
 		//deep copy
+		//TODO
 	}
 	
 	@Override
-	public String toString()
-	{
-		
+	public String toString() {
+		//TODO
 	}
 }

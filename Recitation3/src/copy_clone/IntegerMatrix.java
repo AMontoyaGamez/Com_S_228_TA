@@ -1,4 +1,4 @@
-package recitation2;
+package copy_clone;
 
 /**
  * 
@@ -8,12 +8,14 @@ package recitation2;
 
 public class IntegerMatrix {
 	/**
-	 * Number of rows in the matrix (size of IntegerVector array)
+	 * Number of rows in the matrix (size of IntegerVector 
+	 * array)
 	 */
 	private int rows;
 	
 	/**
-	 * Number of columns in the matrix (size of each IntegerVector)
+	 * Number of columns in the matrix (size of each 
+	 * IntegerVector)
 	 */
 	private int cols;
 	
@@ -51,6 +53,7 @@ public class IntegerMatrix {
 	public IntegerMatrix(IntegerMatrix im)
 	{
 		//deep copy
+		//TODO
 	}
 	
 	/**
@@ -94,6 +97,7 @@ public class IntegerMatrix {
 	@Override
 	public boolean equals(Object obj)
 	{
+		//TODO
 		//check type
 		
 		//cast
@@ -104,12 +108,13 @@ public class IntegerMatrix {
 	@Override
 	public IntegerMatrix clone()
 	{
+		//TODO
 		//deep copy
 	}
 	
 	@Override
 	public String toString()
 	{
-		
+		//TODO
 	}
 }

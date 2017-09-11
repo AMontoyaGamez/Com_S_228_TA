@@ -1,25 +1,46 @@
+/**
+ * @author jason
+ */
+
 package this_vs_super_keyword;
+
 class Animal {
-  void eat() {
-    System.out.println("animal : eat");
-  }
+	private String name;
+	public Animal(String name) {
+		this.name = name;
+	}
+	
+	void eat() {
+		System.out.println("Animal : eat");
+	}
+	
+	void sayName() {
+		System.out.println("My name: " + name);
+	}
 }
 
 class Dog extends Animal {
-  void eat() {
-    System.out.println("dog : eat");
-  }
-  void anotherEat() {
-    super.eat();
-  }
+	public Dog(String name) {
+		super(name);
+	}
+
+	void eat() {
+		System.out.println("Dog : eat");
+	}
+
+	void anotherEat() {
+		super.eat();
+	}
 }
 
 public class Difference {
-  public static void main(String[] args) {
-    Animal a = new Animal();
-    a.eat();
-    Dog d = new Dog();
-    d.eat();
-    d.anotherEat();
-  }
+	public static void main(String[] args) {
+		Animal a = new Animal("Arnoldo");
+		a.sayName();
+		a.eat();
+		Dog d = new Dog("Jason");
+		d.sayName();
+		d.eat();
+		d.anotherEat();
+	}
 }
