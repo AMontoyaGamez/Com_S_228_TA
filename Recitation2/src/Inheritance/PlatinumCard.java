@@ -20,6 +20,7 @@ public class PlatinumCard extends Credit
 	@Override
 	public void pay( int amount )
 	{
+		System.out.println("InPC");
 		super.pay( amount );
 		
 		//rich people get tons of benefits for no reason

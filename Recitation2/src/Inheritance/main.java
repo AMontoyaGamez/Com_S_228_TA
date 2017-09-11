@@ -71,19 +71,19 @@ public class main
 		//What happens here?
 		Credit credit = new Credit( 1200 );
 		
-//		Charge charge = credit;
-//		charge = (Charge) credit;	 // is there a difference?
+		Charge charge = credit;
+		charge = (Charge) credit;	 // is there a difference?
 		
 		
 		//my limit is 1200! I can spend twice that now!!
-//		charge.pay(200);
-//		credit.pay(800);
-//		charge.pay(500);			//whaaaaaaaaat? someone smart explain this.
+		charge.pay(200);
+		credit.pay(800);
+		charge.pay(500);			//whaaaaaaaaat? someone smart explain this.
 		
 		
 		Debit debit = new Debit();
-//		credit = (credit) debit;
-//		debit.deposit(2000);
+//		credit = (Credit) debit;
+		debit.deposit(2000);
 		
 		
 		
@@ -91,22 +91,22 @@ public class main
 //		charge = debit;
 //		charge.pay(1800);
 //		charge.deposit(2000);
-		
+//		
 //		credit = (Credit) charge;
 		
 		PlatinumCard pt = new PlatinumCard(150000);
 		Credit credit2 = credit;
 		credit = pt;
-		credit.pay(99999);
+//		credit.pay(99999);
 		
 		
-		Payment p = pt;
+//		Payment p = pt;
 //		Cash money = (Cash) p;
 		
 //		p = new Cash();
 //		pt.transfer((Charge) p);
 		
-		pt.transfer( new Debit());
+//		pt.transfer( new Debit());
 	}
 
 }

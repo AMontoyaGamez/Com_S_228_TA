@@ -20,7 +20,7 @@ public class Credit extends Charge
 		limit = l;
 	}
 
-	@Override
+
 	public void pay( int amount )
 	{
 		//can I charge?

@@ -20,7 +20,8 @@ public abstract class Charge implements Payment
 		this( 75 );
 	}
 
-	//this method transfers the balance from the current card to the new card.
+	//this method transfers the balance from the current card 
+	//to the new card.
 	public void transfer( Charge newCard )
 	{
 		newCard.setBalance( this.balance );
