@@ -1,6 +1,4 @@
-package copy_clone;
-
-import equalsMethod.Camera;
+package recitation2solution;
 
 /**
  *
@@ -23,8 +21,7 @@ public class IntegerVector implements Cloneable {
 	 *
 	 * @param dimension
 	 * @throws IllegalArgumentException
-	 *             if the dimension is less than or equal to
-	 *             zero
+	 *             if the dimension is less than or equal to zero
 	 */
 	public IntegerVector(int dimension) {
 		if (dimension <= 0)
@@ -40,8 +37,13 @@ public class IntegerVector implements Cloneable {
 	 *            an existing IntVector to be copied
 	 */
 	public IntegerVector(IntegerVector existing) {
-		//deep copy
-		//TODO
+		dim = existing.dim;
+		coords = new int[dim];
+
+		// Alternative: use System.arraycopy(...)
+		for (int i = 0; i < dim; ++i) {
+			coords[i] = existing.coords[i];
+		}
 	}
 
 	/**
@@ -99,13 +101,6 @@ public class IntegerVector implements Cloneable {
 		return result;
 	}
 
-	/*
-	 * Equals
-		//1 - Make sure the object given is not null
-		//2 - Make sure they are of the same class
-		//3 - Downcast object to this type of class
-		//4 - Check its contents, and ensure they are in fact equal
-	 */
 	/**
 	 * Determines whether this vector is equal to the given Object.
 	 *
@@ -114,18 +109,25 @@ public class IntegerVector implements Cloneable {
 	 */
 	@Override
 	public boolean equals(Object obj) {
-		//equals
-		//TODO
+		if (obj == null || obj.getClass() != this.getClass())
+			return false;
+		IntegerVector other = (IntegerVector) obj;
+		if (dim == other.dim) {
+			// Check whether all coordinates are the same
+			//
+			// Alternatively: use Arrays.equals(coords, other.coords)
+			// Note that coords.equals(other.coords) will NOT work
+			for (int i = 0; i < dim; ++i) {
+				if (coords[i] != other.coords[i]) {
+					return false;
+				}
+			}
+			return true;
+		} else {
+			return false;
+		}
 	}
 
-	/*
-	 * Clone
-	 	1-Implement cloneable interface
-		2-Override clone() method
-		3-Run super.clone() in try-catch block(Allocates memory)
-		4-Copy elements into new clone
-
-	 */
 	/**
 	 * Creates a deep copy of this vector.
 	 *
@@ -133,12 +135,35 @@ public class IntegerVector implements Cloneable {
 	 */
 	@Override
 	public IntegerVector clone() {
-		//deep copy
-		//TODO
+		try {
+			IntegerVector copy = (IntegerVector) super.clone();
+
+			// Object.clone() copies fields, now make it into deep copy
+			copy.coords = new int[dim];
+			for (int i = 0; i < dim; ++i) {
+				copy.coords[i] = coords[i];
+			}
+			return copy;
+		} catch (CloneNotSupportedException e) {
+			// should never happen...
+			return null;
+		}
 	}
 
 	@Override
-	public String toString() {
-		//TODO
+	public String toString()
+	{
+		StringBuilder sb = new StringBuilder();
+		for(int i = 0; i < dim; ++i)
+		{
+			sb.append(coords[i]);
+
+			if(i+1 < dim)
+			{
+				sb.append(' ');
+			}
+		}
+
+		return sb.toString();
 	}
 }

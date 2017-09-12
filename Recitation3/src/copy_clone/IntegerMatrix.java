@@ -1,4 +1,4 @@
-package copy_clone;
+package recitation2solution;
 
 /**
  *
@@ -6,16 +6,14 @@ package copy_clone;
  *
  */
 
-public class IntegerMatrix implements Cloneable {
+public class IntegerMatrix {
 	/**
-	 * Number of rows in the matrix (size of IntegerVector
-	 * array)
+	 * Number of rows in the matrix (size of IntegerVector array)
 	 */
 	private int rows;
 
 	/**
-	 * Number of columns in the matrix (size of each
-	 * IntegerVector)
+	 * Number of columns in the matrix (size of each IntegerVector)
 	 */
 	private int cols;
 
@@ -52,7 +50,18 @@ public class IntegerMatrix implements Cloneable {
 	 */
 	public IntegerMatrix(IntegerMatrix im)
 	{
-		//TODO
+		//copy fields
+		rows = im.rows;
+		cols = im.cols;
+		matrix = new IntegerVector[rows];
+
+		//deep copy
+		for(int i = 0; i < rows; ++i)
+		{
+			//use copy constructor
+			matrix[i] = new IntegerVector(im.matrix[i]);
+		}
+
 	}
 
 	/**
@@ -96,49 +105,62 @@ public class IntegerMatrix implements Cloneable {
 	@Override
 	public boolean equals(Object obj)
 	{
-<<<<<<< HEAD
-		//TODO
 		//check type
+		if(obj == null || obj.getClass() != this.getClass())
+			return false;
 
 		//cast
+		IntegerMatrix other = (IntegerMatrix) obj;
 
 		//check equals
-=======
-		//1 - Ensure object given is not null
-		
-		//2 - check type
-		
-		//3 - cast
-		
-		//4 - check equals
->>>>>>> 609225db24279d2a727c40b5ab5ac747a3f82706
+		if(rows != other.rows || cols != other.cols)
+			return false;
+
+		for(int i = 0; i < rows; ++i)
+		{
+			//"recursive" call
+			if(!matrix[i].equals(other.matrix[i]))
+				return false;
+		}
+
+		return true;
 	}
 
 	@Override
 	public IntegerMatrix clone()
 	{
-<<<<<<< HEAD
-		//TODO
-=======
-//	 	1-Implement cloneable interface
-		
-		
-//		2-Override clone() method
-		
-		
-//		3-Run super.clone() in try-catch block(Allocates memory)
-		
-		
-//		4-Copy elements into new clone(Deep Copy)
-		
-				
-//		5-Return clone
->>>>>>> 609225db24279d2a727c40b5ab5ac747a3f82706
+		//deep copy
+		try {
+			IntegerMatrix copy = (IntegerMatrix) super.clone();
+
+			//Object.clone() magically copies primitives
+			copy.matrix = new IntegerVector[rows];
+
+			for(int i = 0; i < rows; ++i)
+			{
+				copy.matrix[i] = matrix[i].clone();
+			}
+			return copy;
+		}
+		catch(CloneNotSupportedException e)
+		{
+			//Should never happen
+			return null;
+		}
 	}
 
 	@Override
 	public String toString()
 	{
-		//TODO
+		StringBuilder sb = new StringBuilder();
+		for(int i = 0; i < rows; ++i)
+		{
+			sb.append(matrix[i].toString());
+
+			if(i+1 < rows)
+				sb.append('\n');
+		}
+
+		return sb.toString();
 	}
 }
