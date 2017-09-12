@@ -1,5 +1,7 @@
 package copy_clone;
 
+import equalsMethod.Camera;
+
 /**
  *
  * @author Dr. Yan-Bin Jia
@@ -97,6 +99,13 @@ public class IntegerVector implements Cloneable {
 		return result;
 	}
 
+	/*
+	 * Equals
+		//1 - Make sure the object given is not null
+		//2 - Make sure they are of the same class
+		//3 - Downcast object to this type of class
+		//4 - Check its contents, and ensure they are in fact equal
+	 */
 	/**
 	 * Determines whether this vector is equal to the given Object.
 	 *
@@ -109,6 +118,14 @@ public class IntegerVector implements Cloneable {
 		//TODO
 	}
 
+	/*
+	 * Clone
+	 	1-Implement cloneable interface
+		2-Override clone() method
+		3-Run super.clone() in try-catch block(Allocates memory)
+		4-Copy elements into new clone
+
+	 */
 	/**
 	 * Creates a deep copy of this vector.
 	 *

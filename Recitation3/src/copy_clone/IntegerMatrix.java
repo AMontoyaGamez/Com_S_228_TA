@@ -96,18 +96,44 @@ public class IntegerMatrix implements Cloneable {
 	@Override
 	public boolean equals(Object obj)
 	{
+<<<<<<< HEAD
 		//TODO
 		//check type
 
 		//cast
 
 		//check equals
+=======
+		//1 - Ensure object given is not null
+		
+		//2 - check type
+		
+		//3 - cast
+		
+		//4 - check equals
+>>>>>>> 609225db24279d2a727c40b5ab5ac747a3f82706
 	}
 
 	@Override
 	public IntegerMatrix clone()
 	{
+<<<<<<< HEAD
 		//TODO
+=======
+//	 	1-Implement cloneable interface
+		
+		
+//		2-Override clone() method
+		
+		
+//		3-Run super.clone() in try-catch block(Allocates memory)
+		
+		
+//		4-Copy elements into new clone(Deep Copy)
+		
+				
+//		5-Return clone
+>>>>>>> 609225db24279d2a727c40b5ab5ac747a3f82706
 	}
 
 	@Override
