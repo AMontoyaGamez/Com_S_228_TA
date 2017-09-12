@@ -86,7 +86,8 @@ public class _0_Zoo implements Cloneable{
 			this.animalLimit = copy.animalLimit;
 			this.currentAnimalCount = copy.currentAnimalCount;
 			this.full = copy.full;
-			this.animals = (ArrayList<String>) copy.animals.clone();
+//			this.animals = (ArrayList<String>) copy.animals.clone(); //Deep copy
+			this.animals = copy.animals; //Shallow Copy
 		}
 		else{
 			throw new IllegalArgumentException("null Object Given");

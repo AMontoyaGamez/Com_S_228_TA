@@ -11,7 +11,7 @@ public class MadLibBigOh
 	
 	
 	
-	// O( ? )
+	// O( 1 )
 	public boolean method0( String[] strings )
 	{
 		if( strings[0] == null ) { return true; }
@@ -22,12 +22,12 @@ public class MadLibBigOh
 	
 	
 
-	// O( ? )
+	// O( n^2 )
 	public boolean method1( String[] strings )
 	{
-		for( int i = 0; i < strings.length; i++ )
+		for( int i = 0; i < strings.length; i++ )//O(n)
 		{
-			for( int j = 0; j < strings.length; j++ )
+			for( int j = 0; j < strings.length; j++ )//O(n)
 			{
 				if( i == j ) // Don't compare with self
 				{
@@ -43,7 +43,7 @@ public class MadLibBigOh
 	
 
 
-	// O( ? )
+	// O( log(n) )
 	public void method2( int n )
 	{
 		int x = 2;
@@ -56,13 +56,13 @@ public class MadLibBigOh
 	
 	
 
-	// O( ? )
+	// O( log(n) )
 	public boolean method3( int[] arr, int v )
 	{
 		int n = arr.length;
 		int left = 0;
 		int right = n - 1;
-		while( left <= right )
+		while( left <= right )// O(log(n))
 		{
 			int mid = ( left + right ) / 2;
 			if( arr[mid] == v ) return true;
@@ -75,7 +75,7 @@ public class MadLibBigOh
 
 	
 
-	// O( ? )
+	// O( n )
 	public boolean method4( String[] strings, String value )
 	{
 		for( int i = 0; i < strings.length; i++ )
@@ -87,7 +87,7 @@ public class MadLibBigOh
 
 	
 
-	// O( ? )
+	// O( log(n) )
 	public void method5( int n )
 	{
 		while( n > 1 )
@@ -98,12 +98,12 @@ public class MadLibBigOh
 
 	
 
-	// O( ? )
+	// O( n*log( n ) )
 	public void method6( int n )
 	{
-		for( int i = 0; i < n; ++i )
+		for( int i = 0; i < n; ++i )// O( n )
 		{
-			//log( n )
+			// O( log( n ) )
 			method2( n );
 		}
 	}
@@ -111,17 +111,17 @@ public class MadLibBigOh
 	
 	
 
-	// O( ? )
+	// O( n*n*( log(n) + n ) = O(n^3)
 	public void method7( int n )
 	{
-		for( int i = 0; i < n; ++i )
+		for( int i = 0; i < n; ++i )// O(n)
 		{
-			for( int j = 0; j < n; ++j )
+			for( int j = 0; j < n; ++j )// O(n)
 			{
-				//?
+				//log(n)
 				method5( n );
 
-				//?
+				//log( n )
 				method4( new String[] { "Hello" }, "lkajsdf" );
 			}
 		}
