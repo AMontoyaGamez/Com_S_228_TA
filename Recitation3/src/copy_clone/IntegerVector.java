@@ -1,7 +1,7 @@
 package copy_clone;
 
 /**
- * 
+ *
  * @author Dr. Yan-Bin Jia
  *
  */
@@ -18,10 +18,10 @@ public class IntegerVector implements Cloneable {
 
 	/**
 	 * Constructs a zero vector of the given dimension.
-	 * 
+	 *
 	 * @param dimension
 	 * @throws IllegalArgumentException
-	 *             if the dimension is less than or equal to 
+	 *             if the dimension is less than or equal to
 	 *             zero
 	 */
 	public IntegerVector(int dimension) {
@@ -33,7 +33,7 @@ public class IntegerVector implements Cloneable {
 
 	/**
 	 * Constructs a deep copy of the given vector.
-	 * 
+	 *
 	 * @param existing
 	 *            an existing IntVector to be copied
 	 */
@@ -44,7 +44,7 @@ public class IntegerVector implements Cloneable {
 
 	/**
 	 * Returns the coordinate at the given index.
-	 * 
+	 *
 	 * @param index
 	 *            position of the coordinate to return
 	 * @return the coordinate at the given index
@@ -58,7 +58,7 @@ public class IntegerVector implements Cloneable {
 
 	/**
 	 * Sets the coordinate at the given index to the given value.
-	 * 
+	 *
 	 * @param index
 	 *            position of the coordinate to set
 	 * @param value
@@ -73,7 +73,7 @@ public class IntegerVector implements Cloneable {
 
 	/**
 	 * Returns the dimension of this vector.
-	 * 
+	 *
 	 * @return the dimension of this vector.
 	 */
 	public int dimension() {
@@ -82,7 +82,7 @@ public class IntegerVector implements Cloneable {
 
 	/**
 	 * Returns the dot product of this vector and the given vector.
-	 * 
+	 *
 	 * @param v
 	 *            the given vector
 	 * @throws IllegalArgumentException
@@ -99,7 +99,7 @@ public class IntegerVector implements Cloneable {
 
 	/**
 	 * Determines whether this vector is equal to the given Object.
-	 * 
+	 *
 	 * @return true if the given Object is an IntVector with the same dimension
 	 *         and the same coordinates as this one.
 	 */
@@ -111,7 +111,7 @@ public class IntegerVector implements Cloneable {
 
 	/**
 	 * Creates a deep copy of this vector.
-	 * 
+	 *
 	 * @return a deep copy of this object.
 	 */
 	@Override
@@ -119,7 +119,7 @@ public class IntegerVector implements Cloneable {
 		//deep copy
 		//TODO
 	}
-	
+
 	@Override
 	public String toString() {
 		//TODO

@@ -18,7 +18,8 @@ public class _0_Zoo implements Cloneable{
 	 * Constructor for a Zoo
 	 * 
 	 * @param givenLimit
-	 *            limit of animals one can have at the zoo at a time
+	 *            limit of animals one can have at the zoo at 
+	 *            a time
 	 */
 	public _0_Zoo(int givenLimit) {
 		this.animalLimit = givenLimit;
@@ -28,7 +29,8 @@ public class _0_Zoo implements Cloneable{
 	}
 
 	/**
-	 * Method that adds a new animal to Zoo, as long as there is stills space
+	 * Method that adds a new animal to Zoo, as long as there 
+	 * is stills space
 	 * for another animal
 	 * 
 	 * @param newAnimal
@@ -65,7 +67,8 @@ public class _0_Zoo implements Cloneable{
 			return null;
 		}
 		
-		//4- copy all things inside object if you're targeting a deep copy.
+		//4- copy all things inside object if you're targeting 
+		//   a deep copy.
 		retZoo.animalLimit = this.animalLimit;
 		retZoo.currentAnimalCount = this.currentAnimalCount;
 		retZoo.full = this.full;
@@ -79,7 +82,8 @@ public class _0_Zoo implements Cloneable{
 	 * Copy constructor for a Zoo
 	 * 
 	 * @param copy
-	 *            Object of this type, that will be used to copy.
+	 *            Object of this type, that will be used to 
+	 *            copy.
 	 */
 	public _0_Zoo(_0_Zoo copy) {
 		if(copy != null){

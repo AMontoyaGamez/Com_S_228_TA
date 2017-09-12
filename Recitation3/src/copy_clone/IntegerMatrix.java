@@ -1,29 +1,29 @@
 package copy_clone;
 
 /**
- * 
+ *
  * @author Chris Fogerty
  *
  */
 
-public class IntegerMatrix {
+public class IntegerMatrix implements Cloneable {
 	/**
-	 * Number of rows in the matrix (size of IntegerVector 
+	 * Number of rows in the matrix (size of IntegerVector
 	 * array)
 	 */
 	private int rows;
-	
+
 	/**
-	 * Number of columns in the matrix (size of each 
+	 * Number of columns in the matrix (size of each
 	 * IntegerVector)
 	 */
 	private int cols;
-	
+
 	/**
 	 * The matrix
 	 */
 	private IntegerVector[] matrix;
-	
+
 	/**
 	 * Constructs a zero rows x cols matrix
 	 * @param rows number of rows
@@ -35,27 +35,26 @@ public class IntegerMatrix {
 	{
 		if(rows <= 0 || cols <= 0)
 			throw new IllegalArgumentException();
-		
+
 		this.rows = rows;
 		this.cols = cols;
 		matrix = new IntegerVector[rows];
-		
+
 		for(int i = 0; i < rows; ++i)
 		{
 			matrix[i] = new IntegerVector(cols);
 		}
 	}
-	
+
 	/**
 	 * constructs a deep copy of the given matrix
 	 * @param im an existing IntegerMatrix to be copied
 	 */
 	public IntegerMatrix(IntegerMatrix im)
 	{
-		//deep copy
 		//TODO
 	}
-	
+
 	/**
 	 * Returns the integer at postion (row, col)
 	 * @param row the row to retrieve
@@ -66,7 +65,7 @@ public class IntegerMatrix {
 	{
 		return matrix[row].get(col);
 	}
-	
+
 	/**
 	 * Sets the integer at the given index to the given value
 	 * @param row the row
@@ -77,7 +76,7 @@ public class IntegerMatrix {
 	{
 		matrix[row].set(col, val);
 	}
-	
+
 	/**
 	 * @return the number of rows in the matrix
 	 */
@@ -85,7 +84,7 @@ public class IntegerMatrix {
 	{
 		return rows;
 	}
-	
+
 	/**
 	 * @return the number of columns in the matrix
 	 */
@@ -93,25 +92,24 @@ public class IntegerMatrix {
 	{
 		return cols;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj)
 	{
 		//TODO
 		//check type
-		
+
 		//cast
-		
+
 		//check equals
 	}
-	
+
 	@Override
 	public IntegerMatrix clone()
 	{
 		//TODO
-		//deep copy
 	}
-	
+
 	@Override
 	public String toString()
 	{
