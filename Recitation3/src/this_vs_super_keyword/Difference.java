@@ -24,12 +24,22 @@ class Dog extends Animal {
 		super(name);
 	}
 
+	@Override
 	void eat() {
 		System.out.println("Dog : eat");
 	}
 
-	void anotherEat() {
+	protected void anotherEat() {
 		super.eat();
+	}
+}
+
+class Bulldog extends Dog {
+	public Bulldog(String name) {
+		super(name);
+	}
+	public void thisEat(){
+		super.anotherEat();
 	}
 }
 

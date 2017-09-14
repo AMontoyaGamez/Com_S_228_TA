@@ -69,7 +69,8 @@ public class _0_Zoo implements Cloneable{
 		retZoo.animalLimit = this.animalLimit;
 		retZoo.currentAnimalCount = this.currentAnimalCount;
 		retZoo.full = this.full;
-		ArrayList<String> arrListClone = (ArrayList<String>) this.animals.clone();
+//		ArrayList<String> arrListClone = (ArrayList<String>) this.animals.clone();//Deep copy
+		ArrayList<String> arrListClone = this.animals;
 		retZoo.animals = arrListClone;
 		
 		return retZoo;
@@ -89,7 +90,7 @@ public class _0_Zoo implements Cloneable{
 			this.animals = (ArrayList<String>) copy.animals.clone();
 		}
 		else{
-			throw new IllegalArgumentException("null Object Given");
+			throw new NullPointerException("null Object Given");
 		}
 	}
 
