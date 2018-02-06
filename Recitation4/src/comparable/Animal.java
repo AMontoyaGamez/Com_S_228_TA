@@ -19,18 +19,26 @@ public class Animal implements Comparable<Animal> {
 	 */
 	@Override
 	public int compareTo(Animal arg0) {
-		// Is this the right way to write compareTo method.
-		int difference = weight - arg0.weight;
+		// Is this the right way to write compareTo 
+		//method.
+		int difference = this.type.compareTo(arg0.type);
+		
+		if (difference == 0) {
+			return this.weight - arg0.weight;
+		}
+		
 		return difference;
 	}
 
 	/*
-	 * You could also use the names to sort by, but compare to must be
+	 * You could also use the names to sort by, 
+	 * but compare to must be
 	 * implemented that way.
 	 */
 //	@Override
 //	public int compareTo(Animal arg0) {
-//		// Is this the right way to write compareTo method.
+//		// Is this the right way to write 
+	    // compareTo method.
 //		return this.type.compareTo(arg0.type);
 //	}
 }
