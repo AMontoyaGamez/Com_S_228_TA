@@ -75,16 +75,16 @@ public class BTree_Traversals {
 	
 	public void inOrderTraversal(TNode root){
 		if(root != null){
-			preOrderTraversal(root.left);
+			inOrderTraversal(root.left);
 			System.out.print(root.data + " - ");
-			preOrderTraversal(root.right);
+			inOrderTraversal(root.right);
 		}
 	}
 	
 	public void postOrderTraversal(TNode root){
 		if(root != null){
-			preOrderTraversal(root.left);
-			preOrderTraversal(root.right);
+			postOrderTraversal(root.left);
+			postOrderTraversal(root.right);
 			System.out.print(root.data + " - ");
 		}
 	}
